@@ -8,15 +8,21 @@ import {
 } from "react-router-dom"
 import HomePage from './views/HomePage';
 import AboutPage from './views/AboutPage';
+import WelcomePage from './views/WelcomePage';
 
 function App() {
+
+  const user = { username: 'whatever' }
+
   return (
     <div>
       <Router>
         <Header />
         <div className="p-3">
           <Routes>
-            <Route path="/" element={<HomePage />}>
+            <Route path="/" element={<HomePage user={user} />}>
+            </Route>
+            <Route path="/welcome" element={<WelcomePage user={user} />}>
             </Route>
             <Route path="/about" element={<AboutPage />}>
             </Route>

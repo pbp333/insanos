@@ -10,6 +10,14 @@ function NavigationMenu(props) {
             <ul>
                 <li>
                     <Link
+                        to="/welcome"
+                        className="text-blue-500 py-3 border-t border-b block"
+                        onClick={props.closeMenu}>
+                        Welcome
+                    </Link>
+                </li>
+                <li>
+                    <Link
                         to="/"
                         className="text-blue-500 py-3 border-t border-b block"
                         onClick={props.closeMenu}>
